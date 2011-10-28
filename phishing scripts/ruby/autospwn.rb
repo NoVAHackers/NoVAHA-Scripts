@@ -1,7 +1,9 @@
 require 'rubygems'
 require 'net/smtp'
 #require 'tmail'
-#require 'smtp_tls' #<= Uncomment if you are using Ruby 1.8.6 or lower 
+if RUBY_VERSION < "1.9"
+  require 'smtp_tls'
+end
 require 'optparse'
 
 
